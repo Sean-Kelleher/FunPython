@@ -1,4 +1,4 @@
-#simple app that lets youcheck out the contents of a JSON file.
+#simple app that lets you check out the contents of a JSON file.
 
 import json
 
@@ -26,8 +26,9 @@ def getValues(key, contents):
 	for d in contents:
 		for item in d[key]:
 			ret = ret + item + ', '
-	#cut off the last comma and space
-	ret = ret[:-2]
+		#cut off the last comma and space
+		ret = ret[:-2]
+		ret = ret + '\n'
 	return ret
 
 def main():
